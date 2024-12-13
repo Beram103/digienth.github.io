@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>DigiEnth</title>
+   
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.dark.css">
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+    <script src="https://unpkg.com/unlazy@0.11.3/dist/unlazy.with-hashing.iife.js" defer init></script>
+    
+    </script>
+    <style type="text/tailwindcss">
+        body {
+            font-family: "Times New Roman", Georgia, Serif;
+            transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+        }
+
+        .dark-mode {
+            background-color: #333;
+            color: #fff;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: "Playfair Display";
+            letter-spacing: 5px;
+        }
+
+        .image-container {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            margin-left: -50px; /* Adjust for slight left offset */
+        }
+
+        .image-container img {
+            width: 500px; /* Increased width */
+            height: 650px; /* Increased height */
+            box-shadow: 0px 6px 8px rgba(178, 178, 178, 1);
+        }
+    </style>
+</head>
+<body>
+    <div class="w3-top">
+        <div class="w3-bar w3-white w3-padding w3-card" style="letter-spacing:4px;">
+            <a href="index.html" class="w3-bar-item w3-button">DigiEnth</a>
+            <div class="w3-right w3-hide-small">
+                <div class="w3-dropdown-hover">
+                    <button class="w3-button">PORTFOLIO</button>
+                    <div class="w3-dropdown-content w3-bar-block w3-card-4">
+                        <a href="portfolio.html" class="w3-bar-item w3-button">Portfolios</a>
+                        <a href="example.html" class="w3-bar-item w3-button">Examples & Questions</a>
+                        <a href="flashcards.html" class="w3-bar-item w3-button">Learning Materials</a>
+                    </div>
+                </div>
+                <a href="index.html" class="w3-bar-item w3-button">HOME</a>
+                <a href="about.html" class="w3-bar-item w3-button">ABOUT</a>
+                <button id="dark-mode-toggle" class="w3-button">Dark Mode</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="w3-main w3-content w3-padding" style="max-width:1200px;margin-top:50px">
+        <div class="flex flex-col md:flex-row items-center justify-center p-8 bg-card text-card-foreground dark:bg-background dark:text-foreground h-screen">
+            <div class="image-container">
+                <img aria-hidden="true" src="Images/5.jpg" />
+            </div>
+            <div class="ml-6 mt-4 md:mt-0 text-center">
+                <h1 class="text-2xl font-bold">I'm Amber Meigoumi S. Apale.</h1>
+                <p class="mt-2">Student of the program for Bachelor's of Science in Information Technology</p>
+                <p class="mt-2">1st Year College Student at University of San Carlos</p>
+                <p class="mt-2"> Block AB Group 1 CIS 1102N</p>
+                <h2 class="mt-4 font-semibold">Contact Information:</h2>
+                <p class="mt-2"> E-mail: ambermeigoumi.apale@gmail.com</p>
+                <p class="mt-2">Cell No.: 0956 037 2616</p>
+                <p class="mt-2">Tel. No.: 344 0037</p>
+                <blockquote class="mt-2 italic text-muted-foreground">"Do things for the future."</blockquote>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const darkModeToggle = document.getElementById('dark-mode-toggle');
+
+        darkModeToggle.addEventListener('click', () => {
+            document.body.classList.toggle('dark-mode');
+        });
+    </script>
+</body>
+</html>
