@@ -1,0 +1,813 @@
+<html>
+  <head>
+    <title>DigiEnth</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+<style>
+		body {
+  font-family: "Times New Roman", Georgia, Serif;
+  background-color: #fff; /* Light mode background color */
+  color: #333; /* Light mode text color */
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.dark-mode {
+  background-color: #333; /* Dark mode background color */
+  color: #ffff; /* Dark mode text color */
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Playfair Display";
+  letter-spacing: 5px;
+}
+
+ .image-size {
+    width: 300px;
+    height: 400px;
+  }
+.gallery {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.container{
+  position: relative;
+}
+
+.image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: purple;
+  overflow: hidden;
+  width: 0;
+  height: 100%;
+  transition: .5s ease;
+text-align: center; 
+font-size:20;
+}
+
+.container:hover .overlay {
+  width: 100%;
+}
+
+.text {
+  white-space: nowrap; 
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  overflow: hidden;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
+
+
+
+.purple {
+            display: flex;
+            flex-direction: column; /* Make body a column */
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            
+        }
+
+        .container3 {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr); /* 5 columns */
+            grid-template-rows: repeat(3, 1fr); /* 3 rows */
+            gap: 20px;
+        }
+
+        .box {
+            width: 300px;
+            height: 300px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: white;
+            border: 2px solid purple;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(128, 0, 128, 0.5);
+            transition: transform 0.2s; /* Only transition transform */
+            cursor: pointer;
+        }
+
+        .box:hover {
+            transform: scale(1.05);
+        }
+
+        .box.enlarged {
+            transform: scale(3); /* Scale up the enlarged box */
+        }
+
+        .box.resized {
+            transform: scale(0.67); /* Scale down the other boxes */ 
+        }
+
+
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+  margin: 0 auto; 
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap; /* Allow elements to wrap to the next line */
+  justify-content: space-around; /* Evenly space photos */
+}
+
+.photo-container {
+  text-align: center;
+  margin: 10px; 
+}
+
+img {
+  width: 300px;
+  height: 400px;
+}
+.dark-mode .box {
+  background-color: #222; /* Dark mode box color */
+  color: #fff; /* Dark mode box text color */
+}
+
+		</style>
+  </head>
+  <body>
+   <div class="w3-top">
+  <div class="w3-bar w3-white w3-padding w3-card" style="letter-spacing:4px;">
+    <a href="index.html" class="w3-bar-item w3-button">DigiEnth</a>
+    <div class="w3-right w3-hide-small">
+          <div class="w3-dropdown-hover">
+      <button class="w3-button">PORTFOLIO</button>
+      <div class="w3-dropdown-content w3-bar-block w3-card-4">
+        <a href="portfolio.html" class="w3-bar-item w3-button">Portfolios</a>
+        <a href="example.html" class="w3-bar-item w3-button">Examples & Questions</a>
+        <a href="flashcards.html" class="w3-bar-item w3-button">Learning Materials</a>
+      </div>
+    </div>
+      <a href="index.html" class="w3-bar-item w3-button">HOME</a>
+      <a href="about.html" class="w3-bar-item w3-button">ABOUT</a>
+      <button id="dark-mode-toggle" class="w3-button">Dark Mode</button>
+    </div>
+  </div>
+</div>
+
+<div class="w3-main w3-content w3-padding" style="max-width:1200px;margin-top:100px">
+
+    <div class="container1 mx-auto p-4">
+  <div class="flex justify-between items-center mb-4">
+    <span class="text-lg font-semibold">Portfolio</span>
+    <span class="text-lg font-semibold">01</span>
+  </div>
+  <hr class="border-t border-zinc-300 mb-8" />
+  <h1 class="text-3xl font-bold text-center mb-4">5 COMPUTING DISCIPLINE AND MAJORS</h1>
+ </div>
+
+  
+  <!-- Photo grid -->
+  <div class="w3-row w3-grayscale-min">
+    <div class="w3-quarter">
+      <img src="P1/2.jpg" style="width:100%" onclick="onClick(this)" >
+      <img src="P1/7.jpg" style="width:100%" onclick="onClick(this)" >
+      <img src="P1/11.jpg" style="width:100%" onclick="onClick(this)" >
+   </div>
+    
+   <div class="w3-quarter">
+      <img src="P1/3.jpg" style="width:100%" onclick="onClick(this)">
+      <img src="P1/8.jpg" style="width:100%" onclick="onClick(this)" >
+      <img src="P1/12.jpg" style="width:100%" onclick="onClick(this)" >
+    </div>
+    
+    <div class="w3-quarter">
+      <img src="P1/4.jpg" style="width:100%" onclick="onClick(this)" >
+      <img src="P1/9.jpg" style="width:100%" onclick="onClick(this)" >
+      <img src="P1/13.jpg" style="width:100%" onclick="onClick(this)" >
+    </div>
+
+    <div class="w3-quarter">
+      <img src="P1/5.jpg" style="width:100%" onclick="onClick(this)" >
+      <img src="P1/10.jpg" style="width:100%" onclick="onClick(this)">
+      <img src="P1/14.jpg" style="width:100%" onclick="onClick(this)" >
+    </div>
+  </div>
+
+  
+  <!-- Modal for full size images on click-->
+  <div id="modal01" class="w3-modal w3-black" style="padding-top:0" onclick="this.style.display='none'">
+    <span class="w3-button w3-black w3-xlarge w3-display-topright">×</span>
+    <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+      <img id="img01" class="w3-image">
+      <p id="caption"></p>
+    </div>
+  </div>
+
+<div class="w3-main w3-content w3-padding" style="max-width:1200px;margin-top:100px">
+  
+  <div class="container1 mx-auto p-4">
+  <div class="flex justify-between items-center mb-4">
+    <span class="text-lg font-semibold">Portfolio</span>
+    <span class="text-lg font-semibold">02</span>
+  </div>
+  <hr class="border-t border-zinc-300 mb-8" />
+  <h1 class="text-3xl font-bold text-center mb-4">DATA, INFORMATION, AND INFORMATION SYSTEMS</h1>
+  </div>
+
+
+
+<div class="w3-content" style="max-width:1200px">
+  <img class="mySlides" src="P2/1.jpg" style="width:100%;display:none">
+  <img class="mySlides" src="P2/2.jpg" style="width:100%">
+  <img class="mySlides" src="P2/3.jpg" style="width:100%;display:none">
+  <img class="mySlides" src="P2/4.jpg" style="width:100%;display:none">
+  <img class="mySlides" src="P2/5.jpg" style="width:100%;display:none">
+  <img class="mySlides" src="P2/6.jpg" style="width:100%;display:none">
+  <img class="mySlides" src="P2/7.jpg" style="width:100%;display:none">
+  <img class="mySlides" src="P2/8.jpg" style="width:100%;display:none">
+  <img class="mySlides" src="P2/9.jpg" style="width:100%;display:none">
+  <img class="mySlides" src="P2/11.jpg" style="width:100%;display:none">
+
+  <div class="w3-row-padding w3-section">
+    <div class="w3-col s2">
+      <img class="demo w3-opacity w3-hover-opacity-off" src="P2/1.jpg" style="width:100%;cursor:pointer" onclick="currentDiv(1)">
+    </div>
+    <div class="w3-col s2">
+      <img class="demo w3-opacity w3-hover-opacity-off" src="P2/2.jpg" style="width:100%;cursor:pointer" onclick="currentDiv(2)">
+    </div>
+    <div class="w3-col s2">
+      <img class="demo w3-opacity w3-hover-opacity-off" src="P2/3.jpg" style="width:100%;cursor:pointer" onclick="currentDiv(3)">
+    </div>
+    <div class="w3-col s2">
+      <img class="demo w3-opacity w3-hover-opacity-off" src="P2/4.jpg" style="width:100%;cursor:pointer" onclick="currentDiv(4)">
+    </div>
+    <div class="w3-col s2">
+      <img class="demo w3-opacity w3-hover-opacity-off" src="P2/5.jpg" style="width:100%;cursor:pointer" onclick="currentDiv(5)">
+    </div>
+    <div class="w3-col s2">
+      <img class="demo w3-opacity w3-hover-opacity-off" src="P2/6.jpg" style="width:100%;cursor:pointer" onclick="currentDiv(6)">
+    </div>
+    <div class="w3-col s2">
+      <img class="demo w3-opacity w3-hover-opacity-off" src="P2/7.jpg" style="width:100%;cursor:pointer" onclick="currentDiv(7)">
+    </div>
+    <div class="w3-col s2">
+      <img class="demo w3-opacity w3-hover-opacity-off" src="P2/8.jpg" style="width:100%;cursor:pointer" onclick="currentDiv(8)">
+    </div>
+    <div class="w3-col s2">
+      <img class="demo w3-opacity w3-hover-opacity-off" src="P2/9.jpg" style="width:100%;cursor:pointer" onclick="currentDiv(9)">
+    </div>
+    <div class="w3-col s2">
+      <img class="demo w3-opacity w3-hover-opacity-off" src="P2/11.jpg" style="width:100%;cursor:pointer" onclick="currentDiv(10)">
+    </div>
+    
+  </div>
+</div>
+
+
+
+ <div class="container1 mx-auto p-4">
+  <div class="flex justify-between items-center mb-4">
+    <span class="text-lg font-semibold">Portfolio</span>
+    <span class="text-lg font-semibold">03</span>
+  </div>
+  <hr class="border-t border-zinc-300 mb-8" />
+  <h1 class="text-3xl font-bold text-center mb-4">NUMBER SYSTEMS</h1>
+ </div>
+
+<div class="gallery">
+  <div class="container">
+    <img src="P3/1.jpg" class="image">
+    <div class="overlay">
+      <div class="text">The language of numbers, like any language, has its own alphabet"<br><br>
+ Method of writing numerals to represent values<br><br>
+ Different types of number systems; <br>decimal, binary, octal and hexadecimal.<br><br>
+ Each with its own base</div>
+    </div>
+  </div>
+  <div class="container">
+    <img src="P3/2.jpg" class="image">
+    <div class="overlay">
+      <div class="text">Is a base 10 number system (0,1,2,3,4,5,6,7,8,9)<br><br>
+ The maximum value of a single digit is 9 <br><br>
+Each position of a digit represents a power of the base (10)<br>
+</div>
+    </div>
+  </div>
+  <div class="container">
+    <img src="P3/4.jpg" class="image">
+    <div class="overlay">
+      <div class="text">A Base 2 number system (0,1)<br><br>
+ The maximum value of a single digit is 1<br><br>
+ Each position of a digit represents a specific power of the
+ base(2)
+</div>
+    </div>
+  </div>
+  <div class="container">
+    <img src="P3/7.jpg" class="image">
+    <div class="overlay">
+      <div class="text"> Is a base 8 number system (0,1,2,3,4,5,6,7)<br>
+<br>
+
+ The maximum value of a single digit is 7 <br>
+<br>
+
+Each position of a digit represents a power of the base (8)</div>
+    </div>
+  </div>
+<div class="container">
+    <img src="P3/9.jpg" class="image">
+    <div class="overlay">
+      <div class="text">Is a base 16 number system (0,1,2,3,4,5,6,7,8,8,A,B,C,D,E,F)<br><br>
+ A, B, C, D, E, and F represent the decimal values <br>10, 11, 12, 13,
+ 14, and 15 respectively <br><br>
+The maximum value of a single digit is 15
+</div>
+    </div>
+  </div>
+<div class="container" style="text-align: center; font-size:28; background-color: pink;" >
+    <p><br><br><br>TAKE NOTE:</p>
+    <div class="overlay">
+      <div class="text"><br>BIT - stands for binary diigit.<br><br>
+- A bit in computer terminology means either a 0 or a 1.<br><br>-A binary number consisting of n bits is called an n-bit number.
+</p></div>
+    </div>
+  </div>
+
+</div>
+
+<div class="w3-main w3-content w3-padding" style="max-width:1200px;margin-top:100px">
+
+
+<div class="container1 mx-auto p-4">
+  <div class="flex justify-between items-center mb-4">
+    <span class="text-lg font-semibold">Portfolio</span>
+    <span class="text-lg font-semibold">04</span>
+  </div>
+  <hr class="border-t border-zinc-300 mb-8" />
+  <h1 class="text-3xl font-bold text-center mb-4">COMPUTER HARDWARE & SOFTWARE</h1>
+ </div>
+
+<div class="container mx-auto p-4">
+  <div class="flex justify-center items-center mb-8">
+    <div class="relative w-1/2 transition-transform transform">  <img src="P4/1.jpg" class="w-full h-auto" />
+    </div>
+    <div class="relative w-1/2 transition-transform transform">  <img src="P4/9.jpg" class="w-full h-auto" />
+    </div>
+  </div>
+  <div class="grid grid-cols-2 gap-4">
+    <div class="bg-card p-4 rounded shadow">
+      <h2 class="text-lg font-bold mb-2">Components of Computer Hardware</h2>
+      <div class="flex flex-wrap">
+        <div class="relative w-1/2 p-2 transition-transform transform">  <img src="Images/input.jpg" class="w-full h-auto" />
+                <h3> Input Devices</h3>
+          <p class="text-muted-foreground"> Keyboard: Used to input text and
+  commands.
+  Mouse: Used to control the cursor on the
+  screen and interact with objects.
+  Scanner: Converts physical documents
+  into digital images.
+  Microphone: Captures audio input for
+  voice commands or recordings.
+  Joystick/Gamepad: Used for gaming and
+  other interactive applications.<br></p>
+        </div>
+        <div class="relative w-1/2 p-2 transition-transform transform">  <img src="Images/output.jpg" class="w-full h-auto" />
+          <h3> Output Devices</h3>
+          <p class="text-muted-foreground">Monitor: Displays visual information.<br>
+ Printer: Produces physical copies of
+ documents.<br>
+ Speakers/Headphones: Output
+ audio.<br>
+ Projector: Displays images on a
+ large screen.</p>
+        </div>
+        <div class="relative w-1/2 p-2 transition-transform transform">  <img src="Images/storage.jpg" class="w-full h-auto" />
+          <h3> Storage Devices</h3>
+          <p class="text-muted-foreground">Hard Disk Drive (HDD): Stores data magnetically.<br>
+ Solid-State Drive (SSD): Stores data electronically,
+ offering faster performance.<br>
+ USB Flash Drive: Portable storage device.<br>
+ External Hard Drive: A larger, external storage
+ device</p>
+        </div>
+        <div class="relative w-1/2 p-2 transition-transform transform">  <img src="Images/processing.jpg" class="w-full h-auto" />
+          <h3> Processing Devices</h3>
+          <p class="text-muted-foreground"> Central Processing Unit (CPU): The "brain" of the computer,
+ responsible for executing instructions.<br>
+ Graphics Processing Unit (GPU): Handles graphics and video
+ processing.
+</p>
+        </div>
+        <div class="relative w-1/2 p-2 transition-transform transform">  <img src="Images/internal.jpg" class="w-full h-auto" />
+          <h3> Internal Components</h3>
+          <p class="text-muted-foreground">Motherboard: The main circuit board that
+ connects all components.<br>
+ Power Supply Unit (PSU): Provides power
+ to the system.<br>
+ RAM (Random Access Memory):
+ Temporary storage for data and
+ programs<br></p>
+        </div>
+      </div>
+    </div>
+    <div class="bg-card p-4 rounded shadow">
+      <h2 class="text-lg font-bold mb-2">Types of Software</h2>
+      <div class="flex flex-col">
+        <div class="relative mb-4 transition-transform transform">  <img src="P4/12.jpg" class="w-full h-auto" />
+          <p class="text-muted-foreground">System Software</p>
+        </div>
+        <div class="relative mb-4 transition-transform transform">  <img src="P4/13.jpg" class="w-full h-auto" />
+          <p class="text-muted-foreground">Application Software.</p>
+        </div>
+      </div>
+    </div>
+    <div class="bg-card p-4 rounded shadow col-span-2">
+      <h2 class="text-lg font-bold mb-2">Their Implementation in the Different Institutions in the Community</h2>
+
+      <h3> Educational Institutions</h3>
+      <p class="text-muted
+            <p class="text-muted-foreground" style="font-size:20;">The implementation of computer hardware and software facilitates
+ personalized learning experiences, enables access to a wealth of online
+ resources, and improves administrative efficiency.<br></p>
+<h3> <br> Healthcare Institutions</h3
+            <p class="text-muted-foreground" style="font-size:20;"> The integration of digital technology in healthcare improves patient
+ care and outcomes, streamlines administrative processes, and
+ enhances communication and collaboration among healthcare
+ providers.<br></p>
+<h3> <br>Government Institutions</h3
+            <p class="text-muted-foreground" style="font-size:20;">The use of ICT in government institutions increases transparency and
+ accountability, improves public service delivery, and facilitates data
+driven decision-making.<br></p>
+<h3>  <br>Business and Industry</h3
+            <p class="text-muted-foreground" style="font-size:20;"> The application of computer systems in business and industry boosts
+ productivity and efficiency, enhances customer service and
+ satisfaction, and improves decision-making through data analysis.<br></p>
+<h3> <br> Community Centers and Libraries</h3>
+            <p class="text-muted-foreground"> The use of digital technology in community centers and libraries
+ enhances educational and social opportunities by providing access to
+ computers, internet, and digital resources.<br></p>
+        </div>
+    </div>
+</div>
+
+
+
+<div class="container1 mx-auto p-4">
+  <div class="flex justify-between items-center mb-4">
+    <span class="text-lg font-semibold">Portfolio</span>
+    <span class="text-lg font-semibold">05</span>
+  </div>
+  <hr class="border-t border-zinc-300 mb-8" />
+  <h1 class="text-3xl font-bold text-center mb-4">TYPES OF MOTHERBOARD</h1>
+ </div>
+
+<div class="w3-main w3-content w3-padding" style="max-width:1200px;margin-top:100px">
+
+<div class="container3  purple" >
+    <div class="box" onclick="toggleEnlarge(this)"  >What is a Motherboard?<br>
+ A computer's motherboard is a circuit board that houses electrical parts and facilitates communication between them (BasuMallick, 2024).<br>
+It is also called the backbone of a computer.<br> 
+It has several components on a single platform<br>
+
+
+</div>
+    <div class="box" onclick="toggleEnlarge(this)">
+Functions of a Motherboard<br>
+-Physical Connection:  Provides slots and sockets for installing the CPU, RAM, and expansion cards (like graphics cards, sound cards, network cards, etc.).<br>
+-Power Distribution: Regulates and distributes electrical power to all components through various power connectors.<br>
+-Data Transfer: Facilitates communication between the CPU, RAM, and other components using a system of buses and circuits.  <br>
+
+</div>
+    <div class="box" onclick="toggleEnlarge(this)">
+Functions of a Motherboard<br>
+ - System Integration: Coordinates the operation of all connected components, ensuring they work together seamlessly<br>
+- Manages data flow: The BIOS ensures that the operating system interacts well with input and output devices. Ensuring that the data sent to the computer moves as expected to perform its intended purpose (BasuMallik, 2024).<br>
+-Enhances performance Boosts the capabilities of a computer. Motherboards often transform the capabilities of a computer. (BasuMallik, 2024)<br>
+
+</div>
+    <div class="box" onclick="toggleEnlarge(this)">AT Motherboard<br> AT motherboards, popular in the 1980s, were a specific size and shape, using ISA expansion slots and a large power connector, and were primarily used in desktop computers of that era.</div>
+
+    <div class="box" onclick="toggleEnlarge(this)">ATX Motherboard<br> ATX motherboards, introduced in 1995, improved upon AT motherboards with better power management, more expansion slots, and built-in USB support, making themmore efficient and user-friendly for modern computers</div>
+
+    <div class="box" onclick="toggleEnlarge(this)">BTX Motherboard<br> BTX is a motherboard form factor designed to improve airflow and cooling efficiency compared to ATX, using advanced technologies like SATA, USB 2.0, and PCI Express</div>
+
+    <div class="box" onclick="toggleEnlarge(this)">Extended ATX Motherboard<br>Extended ATX motherboards are the largest ATX variant, designed for powerful PC systems with ample space and features, enabling better cooling, overclocking, and expansion capabilities.</div>
+
+    <div class="box" onclick="toggleEnlarge(this)">LPX Motherboard<br> LPX is a smaller motherboard form factor used in the late 1980s and 1990s, featuring a different layout and requiring a riser card for expansion.</div>
+
+    <div class="box" onclick="toggleEnlarge(this)">Micro-ATX Motherboard<br> Build AT motherboards, popular in the 1980s, were a specific size and shape, using ISA expansion slots and a large power connector, and were primarily used in desktop computers of that era</div>
+
+    <div class="box" onclick="toggleEnlarge(this)">Mini ITX Motherboard<br>The Mini-ITX is a compact motherboard designed for small form factor PCs, prioritizing energy efficiency over maximum expandability</div>
+
+    <div class="box" onclick="toggleEnlarge(this)">Mini ATX Motherboard<br>Mini-ATX motherboards are a middle ground between ATX and micro-ATX, offering a balance of size and expandability, suitable for smaller cases</div>
+
+    <div class="box" onclick="toggleEnlarge(this)">Pico BTX Motherboard<br> Pico BTX motherboards are small form factor motherboards with limited expansion slots, suitable for digital applications with modest hardware requirements</div>
+
+    <div class="box" onclick="toggleEnlarge(this)">Standard ATX Motherboard<br>ATX is a more compact and standardized version of the AT motherboard, introduced by Intel in the 1990s. It offers improved component interchangeability and advanced connection technologies</div>
+
+ <div class="box" onclick="toggleEnlarge(this)">For more information please refer to the learning materials :) </div>
+
+
+</div>
+
+
+<div class="w3-main w3-content w3-padding" style="max-width:1200px;margin-top:100px">
+<div class="w3-main w3-content w3-padding" style="max-width:1200px;margin-top:100px">
+<div class="w3-main w3-content w3-padding" style="max-width:1200px;margin-top:100px">
+<div class="w3-main w3-content w3-padding" style="max-width:1200px;margin-top:100px">
+<div class="w3-main w3-content w3-padding" style="max-width:1200px;margin-top:100px">
+<div class="w3-main w3-content w3-padding" style="max-width:1200px;margin-top:100px">
+
+
+
+
+
+
+
+<div class="container1 mx-auto p-4">
+  <div class="flex justify-between items-center mb-4">
+    <span class="text-lg font-semibold">Portfolio</span>
+    <span class="text-lg font-semibold">06</span>
+  </div>
+  <hr class="border-t border-zinc-300 mb-8" />
+  <h1 class="text-3xl font-bold text-center mb-4">TYPES OF COMPUTERS</h1>
+ </div>
+
+
+<table>
+  <tr>
+    <th>Classification of Computers</th>
+    <th>Classification of Digital Computer</th>
+  </tr>
+  <tr>
+    <td><textarea rows="4" cols="50" style="text-align:justify;" readonly>
+Computers can be categorized according to what they are meant to do. They could fall under three main categories: Digital, Analog, and Hybrid.
+
+1. Digital Computers 
+  - Modern computers that process information in discrete form using binary code (0s and 1s). These are commonly used in industries, businesses, and scientific fields, suitable for processing large volumes of data. 
+
+2. Analog Computers 
+  - These computers process continuous data from physical processes. An example is a thermometer, which measures temperature changes. Analog computers excel in simulations, making them ideal for testing systems repeatedly in real-time environments, such as in aircraft simulations and nuclear power plants. 
+
+3. Hybrid Computers 
+  - Combining analog and digital technologies, these computers offer the speed of analog with the precision of digital. They handle both digital and analog signals, often converting between the two, and are used for complex simulations efficiently. 
+
+4. Supercomputers 
+  - The most powerful and expensive supercomputers handle complex scientific calculations, simulations, and research tasks, like weather forecasting and cryptography. 
+
+5. Mainframe Computers 
+  - Large, powerful systems used by organizations such as banks and airlines to process massive data amounts and support multiple users simultaneously. 
+
+6. Mini Computers 
+  - Smaller than mainframes but still capable of handling significant data and multiple users. They are common in small to medium-sized businesses for tasks like accounting and inventory management. 
+
+7. Personal Computers 
+- Affordable and designed for individual use, personal computers are used for productivity, entertainment, and communication. 
+
+8. Workstations 
+- High-performance computers for professionals (e.g., architects, engineers) running complex software for tasks like 3D modeling and scientific visualization. 
+
+9. Embedded Systems 
+- These are Specialized computers integrated into devices to perform specific tasks. 
+
+10. Mobile Devices 
+- Portable computers such as smartphones, tablets, and laptops designed for use on the go.
+      
+    </textarea></td>
+    <td><textarea rows="4" cols="50" style="text-align:justify;" readonly>
+1. Micro Computers: Also known as Personal Computers, they use a microprocessor and include desktops and laptops. They handle small volumes of data and 
+are versatile for various applications like workstations, CAD, multimedia, and advertising. Examples include PDAs and tablets. 
+
+2. Mini Computers: Support multiple users simultaneously and are used in organizations to interconnect departmental computers. They are useful for small 
+business operations. 
+
+3. Main Frames: Large, powerful computers with high memory capacity, capable of processing huge databases at high speed. Suitable for big organizations 
+like banks and industries, supporting hundreds of users simultaneously. 
+
+4. Super Computers: The fastest and most expensive, capable of executing billions of instructions per second. They are multiprocessor systems used for complex 
+scientific applications such as weather forecasting and cryptography. 
+
+5. Minicomputers: Smaller than mainframes, still handle multiple users and large data. Used by small to medium-sized businesses for tasks like accounting and 
+inventory management. 
+
+6. Microcomputers: Commonly known as personal computers (PCs), designed for individual use. Used for productivity, entertainment, and communication. 
+
+7. Workstations: High-performance computers for professionals (e.g., architects, engineers) running complex software for tasks like 3D modeling and scientific 
+visualization. 
+
+8. Embedded Systems: Specialized computers built into devices like cars and appliances to control specific functions. 
+
+9. Mobile Devices: Portable computers such as smartphones, tablets, and laptops designed for on-the-go use. 
+
+10. Mainframe Computers: Large, powerful computers used by organizations like banks, airlines, and government agencies to process vast amounts of data and 
+support many users at once. 
+
+11. Supercomputers: Extremely powerful and costly computers used for advanced scientific calculations, simulations, and research in areas like weather 
+forecasting, cryptography, and nuclear studies. </textarea></td>
+  </tr>
+</table>
+
+<div class="container">
+  <div class="photo-container">
+    <img src="Images/supercomputer.jpg" alt="Photo 1">
+    <p>Supercomputer</p>
+  </div>
+  <div class="photo-container">
+    <img src="Images/mainframe.jpg" alt="Photo 2">
+    <p>Mainframe Computers </p>
+  </div>
+  <div class="photo-container">
+    <img src="Images/mini.jpg" alt="Photo 3">
+    <p>Mini Computers </p>
+  </div>
+  <div class="photo-container">
+    <img src="Images/server.jpg" alt="Photo 4">
+    <p>Server</p>
+  </div>
+  <div class="photo-container">
+    <img src="Images/workstation.jpg" alt="Photo 5">
+    <p>Workstations</p>
+  </div>
+  <div class="photo-container">
+    <img src="Images/micro.jpg" alt="Photo 6">
+    <p>Micro Computers</p>
+  </div>
+</div>
+
+
+<div class="w3-main w3-content w3-padding" style="max-width:1200px;margin-top:100px">
+
+<table>
+  <tr style="text-align: center;">
+    <th>Type of Computer</th>
+    <th>Processing Speed</th>
+    <th>Memory Capacity</th>
+    <th>Power Consumption</th>
+    <th>Usage</th>
+  </tr>
+  <tr>
+    <td style="text-align: center;">MINI COMPUTER </td>
+    <td>Relatively slow processing 
+power, ideal for managing 
+devices, measuring data, 
+and transmitting information. </td>
+    <td>Initially used magnetic cores to 
+store a limited amount of 
+information; later adopted more 
+efficient semiconductor 
+memory. </td>
+    <td>Requires less power and cooling 
+compared to mainframe 
+computers. </td>
+    <td>Versatile machines suitable for 
+entertainment, gaming, running 
+small business operations, and 
+working on the go</td>
+  </tr>
+  <tr>
+    <td style="text-align: center;">MICRO COMPUTER</td>
+    <td>The speed can differ 
+significantly; newer models 
+are much faster than older 
+ones. </td>
+    <td>Early models had limited 
+memory capacity; 
+contemporary systems offer 
+significantly more memory and 
+versatile storage solutions. </td>
+    <td>Typically consumes less energy, 
+but the specific power usage 
+depends on the model and 
+workload.</td>
+    <td>Well-suited for handling data, 
+creating visuals, communicating, 
+managing finances, and general 
+personal and work-related 
+activities.</td>
+  </tr>
+  <tr>
+    <td style="text-align: center;">WORKSTATION</td>
+    <td>owerful computing 
+capabilities for complex tasks 
+such as creating 3D images, 
+modifying videos, and 
+running scientific 
+experiments. </td>
+    <td>Substantial memory capacity 
+(exceeding 64GB) designed to 
+handle complex and resource
+intensive operations. </td>
+    <td>Consumes a significant amount of 
+energy and necessitates robust 
+cooling systems. </td>
+    <td>Capable of running complex 
+software and advanced tools for 
+design, graphics, and research 
+purposes. </td>
+  </tr>
+  <tr>
+    <td style="text-align: center;">SERVER</td>
+    <td>Efficient processing of large 
+amounts of data, prioritizing 
+accuracy and dependability 
+over sheer processing power. </td>
+    <td>Significant amount of high
+speed memory (over 64GB) for 
+rapid data access and 
+processing. </td>
+    <td>Energy consumption depends on 
+the computer's size and the tasks it 
+performs. Modern hardware 
+designs prioritize energy efficiency. </td>
+    <td>Provides centralized data storage, 
+communication services, cloud
+based computing, and virtualized 
+environments for organizations. <td>
+  </tr>
+</table>
+
+
+   <script>
+   
+function onClick(element) {
+  document.getElementById("img01").src = element.src;
+  document.getElementById("modal01").style.display = "block";
+  var captionText = document.getElementById("caption");
+  captionText.innerHTML = element.alt;
+}
+
+function currentDiv(n) {
+  showDivs(slideIndex = n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  if (n > x.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" w3-opacity-off", "");
+  }
+  x[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " w3-opacity-off";
+}
+
+
+let enlargedBox = null;
+
+        function toggleEnlarge(element) {
+            if (enlargedBox && enlargedBox !== element) {
+                enlargedBox.classList.remove('enlarged');
+            }
+
+            const allBoxes = document.querySelectorAll('.box');
+            allBoxes.forEach(box => {
+                box.classList.remove('resized');
+            });
+
+            element.classList.toggle('enlarged');
+            if (element.classList.contains('enlarged')) {
+                enlargedBox = element;
+            } else {
+                enlargedBox = null;
+            }
+        }
+
+        document.addEventListener('click', (event) => {
+            if (!event.target.classList.contains('box') && enlargedBox) {
+                enlargedBox.classList.remove('enlarged');
+                allBoxes.forEach(box => {
+                    box.classList.remove('resized');
+                });
+                enlargedBox = null;
+            }
+        });
+
+    const darkModeToggle = document.getElementById('dark-mode-toggle');
+
+    darkModeToggle.addEventListener('click', () => {
+      document.body.classList.toggle('dark-mode');
+    });
+  </script>
+  </body>
+</html>
+
+
