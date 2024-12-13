@@ -33,41 +33,6 @@ h1, h2, h3, h4, h5, h6 {
   gap: 20px;
 }
 
-	.modal {
-  display: none;
-  position: fixed;
-  z-index: 1000;
-  padding-top: 60px;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  overflow: auto;
-  background-color: rgba(0, 0, 0, 0.9);
-}
-
-.modal-content {
-  margin: auto;
-  display: block;
-  width: 80%;
-  max-width: 700px;
-}
-
-.close {
-  position: absolute;
-  top: 15px;
-  right: 35px;
-  color: white;
-  font-size: 40px;
-  font-weight: bold;
-  cursor: pointer;
-}
-
-@media screen and (max-width: 700px) {
-  .modal-content {
-    width: 100%;
-  }
-
 .container{
   position: relative;
 }
@@ -240,11 +205,6 @@ img {
       <img src="P1/14.jpg" style="width:100%" onclick="onClick(this)" >
     </div>
   </div>
-
-<div id="modal" class="modal" onclick="closeModal()">
-  <span class="close">&times;</span>
-  <img id="modalImg" class="modal-content">
-</div>
 
   
   <!-- Modal for full size images on click-->
@@ -573,11 +533,6 @@ Functions of a Motherboard<br>
 <div class="w3-main w3-content w3-padding" style="max-width:1200px;margin-top:100px">
 
 
-
-
-
-
-
 <div class="container1 mx-auto p-4">
   <div class="flex justify-between items-center mb-4">
     <span class="text-lg font-semibold">Portfolio</span>
@@ -782,7 +737,7 @@ environments for organizations. <td>
 
 
    <script>
-	   
+   
 function onClick(element) {
   document.getElementById("img01").src = element.src;
   document.getElementById("modal01").style.display = "block";
@@ -790,17 +745,6 @@ function onClick(element) {
   captionText.innerHTML = element.alt;
 }
 
-function onClick(element) {
-  var modal = document.getElementById("modal");
-  var modalImg = document.getElementById("modalImg");
-  modal.style.display = "block";
-  modalImg.src = element.src;
-}
-
-function closeModal() {
-  document.getElementById("modal").style.display = "none";
-}
-	   
 function currentDiv(n) {
   showDivs(slideIndex = n);
 }
