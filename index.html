@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>DigiEnth</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<style>
+body {
+  font-family: "Times New Roman", Georgia, Serif;
+  background-color: #fff; /* Light mode background color */
+  color: #333; /* Light mode text color */
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+  min-height: 100vh; /* Set minimum height to viewport height */
+  display: flex; /* Use flexbox for full-page layout */
+  flex-direction: column; /* Set main axis to vertical */
+  /* Increase font size for all elements except images */
+  font-size: 120%; 
+}
+
+.dark-mode {
+  background-color: #333; /* Dark mode background color */
+  color: #ffff; /* Dark mode text color */
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Playfair Display";
+  letter-spacing: 5px;
+}
+
+.mySlides {display:none;}
+
+.vertical-line {
+  position: absolute;
+  top: 450px;
+  left: 40%;
+  transform: translateX(-50%);
+  width: 2px;
+  height: 400px;
+  background-color: black;
+}
+
+.container {
+  display: flex; /* Use flexbox for horizontal layout */
+}
+
+.left-box {
+  width: 30%; /* Adjust width as needed */
+  height: 300px; 
+  background-color: #fff; 
+  box-shadow: 5px 5px 10px rgba(128, 0, 128, 0.5); /* Purple shadow */
+  margin-right: 20px; /* Add spacing between boxes */
+  justify-content: center; /* Center content within the left box */
+  align-items: center; 
+}
+
+.right-box {
+  width: 70%; /* Adjust width as needed */
+  height: 300px; 
+  background-color: #fff; 
+  box-shadow: 5px 5px 10px rgba(0, 0, 255, 0.5); /* Blue shadow */
+  justify-content: center; /* Center content within the right box */
+  align-items: center;
+}
+
+.dark-mode .box {
+  background-color: #222; /* Dark mode box color */
+  color: #fff; /* Dark mode box text color */
+}
+
+/* Add this CSS to make the content fill the remaining space */
+.main-content {
+  flex: 1; /* Make the main content grow to fill the remaining space */
+}
+
+</style>
+</head>
+<body >
+
+<div class="w3-top">
+  <div class="w3-bar w3-white w3-padding w3-card" style="letter-spacing:4px;">
+    <a href="index.html" class="w3-bar-item w3-button">DigiEnth</a>
+    <div class="w3-right w3-hide-small">
+        <div class="w3-dropdown-hover">
+          <button class="w3-button">PORTFOLIO</button>
+          <div class="w3-dropdown-content w3-bar-block w3-card-4">
+            <a href="portfolio.html" class="w3-bar-item w3-button">Portfolios</a>
+            <a href="example.html" class="w3-bar-item w3-button">Examples & Questions</a>
+            <a href="flashcards.html" class="w3-bar-item w3-button">Learning Materials</a>
+          </div>
+        </div>
+        <a href="index.html" class="w3-bar-item w3-button">HOME</a>
+        <a href="about.html" class="w3-bar-item w3-button">ABOUT</a>
+        <button id="dark-mode-toggle" class="w3-button">Dark Mode</button>
+    </div>
+  </div>
+</div>
+
+  <div class="w3-main w3-content w3-padding" style="max-width:1200px;margin-top:50px">
+
+<div class="main-content"> 
+
+  <div class="w3-content w3-section" style="max-width:500px">
+    <img class="mySlides" src="Images/4.jpg" style="width:100%">
+    <img class="mySlides" src="Images/2.jpg" style="width:100%">
+    <img class="mySlides" src="Images/3.jpg" style="width:100%">
+  </div>
+
+  <div class="w3-main w3-content w3-padding" style="max-width:1200px;margin-top:50px">
+
+    <div class="flex items-center justify-center h-screen bg-background">
+      <div class="w-1/2 h-2/4 bg-card shadow-lg rounded-xl p-6 mx-4 flex flex-col justify-between" 
+           style="box-shadow: 5px 5px 10px rgba(0, 0, 255, 0.5);"> 
+        <blockquote class="text-muted-foreground" style="text-align: justify-center">
+          The website “DigiEnth” is dedicated to helping a diverse audience, including students, tech enthusiasts, and IT, CS, and IS professionals by providing in-depth information on various computing topics. 
+          It aims to cover multiple subjects, such as different computing disciplines, hardware and software components, number systems, data, information, motherboard form factors, and computer types. 
+          The website aims to give a deeper comprehensive Digital Resource for Computing Enthusiasts to grasp computer ideas and function as a trustworthy source of accurate information by providing a well-balanced platform.
+          <footer class="mt-4 text-right text-sm text-muted-foreground">About DigiEnth</footer>
+        </blockquote>
+      </div>
+      <div class="w-1/2 h-2/4 bg-card shadow-lg rounded-xl p-6 mx-4 flex flex-col justify-between" 
+           style="box-shadow: 5px 5px 10px rgba(128, 0, 128, 0.5);"> 
+        <blockquote class="text-lg italic text-muted-foreground">
+          "Do your best to present yourself to God as one approved, a worker who does not need to be ashamed and who correctly handles the word of truth."
+          <footer class="mt-4 text-right text-sm text-muted-foreground">~ 2 Timothy 2:15</footer>
+        </blockquote>
+
+      </div>
+      
+    </div>
+
+  </div>
+
+</div>
+
+<script>
+  var myIndex = 0;
+  carousel();
+
+  function carousel() {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    for (i = 0; i < x.length; i++) {
+      x[i].style.display = "none";  
+    }
+    myIndex++;
+    if (myIndex > x.length) {myIndex = 1}    
+    x[myIndex-1].style.display = "block";  
+    setTimeout(carousel, 2000); // Change image every 2 seconds
+  }
+    const darkModeToggle = document.getElementById('dark-mode-toggle');
+
+    darkModeToggle.addEventListener('click', () => {
+      document.body.classList.toggle('dark-mode');
+    });
+</script>
+</body>
+</html>
